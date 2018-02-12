@@ -24,6 +24,7 @@ https://certbot.eff.org/
       -v <path to certificates>:/etc/letsencrypt \
       -e DOCKMAIL=<mail address> \
       -e DOCKMAILDOMAINS=<domains list> \
+      -e DOCKUPGRADE=<0|1> \
       -p 80:80 \
       -p 443:443 \
       digrouz/docker-certbot certbot
@@ -34,6 +35,7 @@ https://certbot.eff.org/
       -v <path to certificates>:/etc/letsencrypt \
       -e DOCKMAIL=<mail address> \
       -e DOCKMAILDOMAINS=<domains list> \
+      -e DOCKUPGRADE=<0|1> \
       -p 80:80 \
       -p 443:443 \
       digrouz/docker-certbot certbot-renew
