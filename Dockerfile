@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM centos:7
 LABEL maintainer "DI GREGORIO Nicolas <ndigregorio@ndg-consulting.tech>"
 
 ### Environment variables
@@ -7,13 +7,12 @@ ENV LANG='en_US.UTF-8' \
     TERM='xterm' 
 
 ### Install Application
-RUN apk --no-cache upgrade && \
-    apk add --no-cache --virtual=run-deps \
-      certbot \
-      bash \
-    && \
+RUN yum install -y epel-release && \
+    yum upgrade -y && \
+    yum install -y certbot && \
+    yum clean all && \
     rm -rf /tmp/* \
-           /var/cache/apk/*  \
+           /var/cache/yum/* \
            /var/tmp/*
 
 ### Volume
