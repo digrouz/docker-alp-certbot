@@ -27,7 +27,7 @@ https://certbot.eff.org/
       -e DOCKUPGRADE=<0|1> \
       -p 80:80 \
       -p 443:443 \
-      digrouz/docker-certbot certbot
+      digrouz/cerbot certbot
 
 ### Renewing certificate
     docker run --name=certbot \
@@ -38,7 +38,7 @@ https://certbot.eff.org/
       -e DOCKUPGRADE=<0|1> \
       -p 80:80 \
       -p 443:443 \
-      digrouz/docker-certbot certbot-renew
+      digrouz/certbot certbot-renew
 
 
 ## Environment Variables
